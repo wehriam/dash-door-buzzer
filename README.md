@@ -20,10 +20,13 @@ Follow the [node-dash-button instructions](https://github.com/hortinstein/node-d
   * Custom message
 5. Install dependencies: `npm install`
 6. Make index.js executable: `chmod +x index.js`
-7. Run [`index.js`](https://github.com/wehriam/dash-door-buzzer/blob/master/index.js) as root: `sudo ./index.js`
+7. Make sure the first line of [`index.js`](https://github.com/wehriam/dash-door-buzzer/blob/master/index.js) reflects the location of your node executable.
+8. Run [`index.js`](https://github.com/wehriam/dash-door-buzzer/blob/master/index.js) as root: `sudo ./index.js`
 
 If you're on OSX you may want to run this script on startup.
 
 1. Modify [`com.wehriam.dash-door-buzzer.node.plist`](https://github.com/wehriam/dash-door-buzzer/blob/master/com.wehriam.dash-door-buzzer.node.plist) file to point to your [`index.js`](https://github.com/wehriam/dash-door-buzzer/blob/master/index.js) file
 2. Copy [`com.wehriam.dash-door-buzzer.node.plist`](https://github.com/wehriam/dash-door-buzzer/blob/master/com.wehriam.dash-door-buzzer.node.plist) to `/Library/LaunchDaemons`
-3. Run `sudo launchctl load /Library/LaunchDaemons/com.wehriam.dash-door-buzzer.node.plist`
+3. Run `sudo chgrp wheel com.wehriam.dash-door-buzzer.node.plist`
+4. Run `sudo chown root com.wehriam.dash-door-buzzer.node.plist`
+5. Run `sudo launchctl load /Library/LaunchDaemons/com.wehriam.dash-door-buzzer.node.plist`

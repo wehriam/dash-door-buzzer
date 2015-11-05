@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/local/bin/node
 
 var dash_button = require('node-dash-button');
 var config = require("./config");

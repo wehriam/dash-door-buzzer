@@ -5,8 +5,10 @@
     <key>Label</key>
     <string>com.wehriam.dash-door-buzzer.node</string>
     <key>Program</key>
-    <string>/users/johnwehr/Documents/dash-door-buzzer/index.js</string>
+    <string>/users/johnwehr/Documents/dash-door-buzzer-master/index.js</string>
     <key>KeepAlive</key>
+    <key>WorkingDirectory</key>
+    <string>/users/johnwehr/Documents/dash-door-buzzer-master</string>
     <true/>
     <key>RunAtLoad</key>
     <true/>
