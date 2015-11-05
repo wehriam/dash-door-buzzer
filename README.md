@@ -18,5 +18,6 @@ Follow the [node-dash-button instructions](https://github.com/hortinstein/node-d
   * Twilio number
   * Phone number
   * Custom message
-5. Make index.js executable: `chmod +x index.js`
-6. Run [`index.js`](https://github.com/wehriam/dash-door-buzzer/blob/master/index.js) as root: `sudo ./index.js`
+5. Install dependencies: `npm install`
+6. Make index.js executable: `chmod +x index.js`
+7. Run [`index.js`](https://github.com/wehriam/dash-door-buzzer/blob/master/index.js) as root: `sudo ./index.js`
