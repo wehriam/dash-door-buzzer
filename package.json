@@ -1,0 +1,24 @@
+{
+  "name": "dash-door-buzzer",
+  "version": "1.0.0",
+  "description": "Amazon Dash Button hack that sends a text message via Twilio when the button is pressed.",
+  "main": "index.js",
+  "dependencies": {
+    "node-dash-button": "^0.2.5",
+    "twilio": "^2.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wehriam/dash-door-buzzer.git"
+  },
+  "author": "John Wehr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wehriam/dash-door-buzzer/issues"
+  },
+  "homepage": "https://github.com/wehriam/dash-door-buzzer#readme"
+}
