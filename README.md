@@ -25,5 +25,5 @@ Follow the [node-dash-button instructions](https://github.com/hortinstein/node-d
 If you're on OSX you may want to run this script on startup.
 
 1. Modify [`com.wehriam.dash-door-buzzer.node.plist`](https://github.com/wehriam/dash-door-buzzer/blob/master/com.wehriam.dash-door-buzzer.node.plist) file to point to your [`index.js`](https://github.com/wehriam/dash-door-buzzer/blob/master/index.js) file
-2. Copy it to `/Library/LaunchDaemons`
-3. Run `sudo launchctl load /Library/LaunchAgents/com.balanceinfosystems.socialshields.twisted.plist`
+2. Copy [`com.wehriam.dash-door-buzzer.node.plist`](https://github.com/wehriam/dash-door-buzzer/blob/master/com.wehriam.dash-door-buzzer.node.plist) to `/Library/LaunchDaemons`
+3. Run `sudo launchctl load /Library/LaunchDaemons/com.wehriam.dash-door-buzzer.node.plist`
