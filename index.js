@@ -7,18 +7,23 @@ var twilio = require('twilio')(config.TWILIO_ACCOUNT_SID, config.TWILIO_ACCOUNT_
 console.log("Starting Amazon Dash Buzzer Hack.");
 
 var send_message = function(){
-  config.PHONE_NUMBERS.forEach(function(phone_number){
-    console.log("Sending to " + phone_number + " from " + config.TWILIO_NUMBER);
-    twilio.messages.create({
+  var numbers = config.PHONE_NUMBERS.slice(0);
+  var _send = function(){
+    if(numbers.length === 0) {
+      return;
+    }
+    var number = numbers.pop();
+    return twilio.messages.create({
       body: config.MESSAGE,
-      to: phone_number,
+      to: number,
       from: config.TWILIO_NUMBER
-    }, function(error, message) {
-      if(error) {
-        throw error;
-      }
-    });
-  });
+    }).then(function(message){
+      console.log(message);
+    }, function(e){
+      console.log(e);
+    }).then(_send);
+  };
+  _send();
 };
 
 config.MAC_ADDRESSES.forEach(function(mac_address){
